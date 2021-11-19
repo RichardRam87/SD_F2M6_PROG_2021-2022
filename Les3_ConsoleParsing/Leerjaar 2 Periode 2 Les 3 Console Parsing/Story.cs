@@ -43,7 +43,10 @@ namespace Leerjaar_2_Periode_2_Les_3_Console_Parsing
                 }
                 Console.WriteLine("Invalid Input: Option not available");
             }
-            Console.WriteLine("Invalid Input: Please insert a number");
+            else
+            {
+                Console.WriteLine("Invalid Input: Please insert a number");
+            }
             return AskForInput(maxNumber);
         }
 
