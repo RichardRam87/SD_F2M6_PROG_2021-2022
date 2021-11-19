@@ -41,9 +41,9 @@ namespace Leerjaar_2_Periode_2_Les_3_Console_Parsing
                 {
                     return input;
                 }
-                Console.WriteLine("Ongeldige input: Optie niet beschikbaar");
+                Console.WriteLine("Invalid Input: Option not available");
             }
-            Console.WriteLine("Ongeldige input: Geef een getal op");
+            Console.WriteLine("Invalid Input: Please insert a number");
             return AskForInput(maxNumber);
         }
 
