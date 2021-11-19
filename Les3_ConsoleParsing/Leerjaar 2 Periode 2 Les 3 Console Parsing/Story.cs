@@ -9,12 +9,14 @@ namespace Leerjaar_2_Periode_2_Les_3_Console_Parsing
     class Story
     {
         public Room startRoom { get; set; }
-        private Room currentRoom;
+        public Room currentRoom { get; private set; }
         public Story()
         {
             
         }
-
+        /// <summary>
+        /// Runs the story and asks for input
+        /// </summary>
         public void Run()
         {
             if (currentRoom == null)
@@ -32,22 +34,28 @@ namespace Leerjaar_2_Periode_2_Les_3_Console_Parsing
             currentRoom = currentRoom.destinations[choice];
             
         }
+
+        /// <summary>
+        /// Ask for a number, when the input is invalid it retries.
+        /// </summary>
+        /// <param name="maxNumber"></param>
+        /// <returns></returns>
         private int AskForInput(int maxNumber)
         {
             int input;
-            if (int.TryParse(Console.ReadLine(), out input))
+            if (int.TryParse(Console.ReadLine(), out input))  //if the input can be converted into an int
             {
-                if(input < maxNumber)
+                if(input < maxNumber)//when it's lower than the maximum accepted value
                 {
-                    return input;
+                    return input;   //return the input
                 }
-                Console.WriteLine("Invalid Input: Option not available");
+                Console.WriteLine("Invalid Input: Option not available"); //otherwise it's either not a valid option
             }
             else
             {
-                Console.WriteLine("Invalid Input: Please insert a number");
+                Console.WriteLine("Invalid Input: Please insert a number"); //or the input wasn't parsable
             }
-            return AskForInput(maxNumber);
+            return AskForInput(maxNumber); //and it should retry
         }
 
     }
