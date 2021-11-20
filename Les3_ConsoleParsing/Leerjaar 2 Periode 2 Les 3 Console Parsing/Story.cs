@@ -55,7 +55,7 @@ namespace Leerjaar_2_Periode_2_Les_3_Console_Parsing
             {
                 Console.WriteLine("Invalid Input: Please insert a number"); //or the input wasn't parsable
             }
-            return AskForInput(maxNumber); //and it should retry
+            return AskForInput(maxNumber); //Retry on invalid input
         }
 
     }
