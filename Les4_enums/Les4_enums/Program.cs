@@ -15,9 +15,9 @@ namespace Les4_enums
             pokedex.AddPokemon(charmander);
             pokedex.AddPokemon(voltorb);
 
-            Pokemon[] allElectricPokemon = pokedex.GetPokemonOfType(PokemonTypes.Electric);
+            Pokemon[] allPokemonOfType = pokedex.GetPokemonOfType(PokemonTypes.Electric);
 
-            foreach (Pokemon pokemon in allElectricPokemon)
+            foreach (Pokemon pokemon in allPokemonOfType)
             {
                 Console.WriteLine($"{pokemon.Name}");
             }
