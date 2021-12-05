@@ -33,8 +33,9 @@ namespace Leerjaar_2_Periode_2_Les_3_Console_Parsing
 
             while (true)
             {
-                //run the story
-                story.Run();
+                //run the story with int input
+                //story.Run();
+                story.RunArrowInput();
             }
         }
     }
